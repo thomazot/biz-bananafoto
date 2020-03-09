@@ -8,26 +8,10 @@
             <div class="showcase-super-kit__descriptions">Procurando um kit de forográfia completo para o seu hobbie ou trabalho?</div>
         </div>
         <div class="showcase-super-kit__main">
-            <a href="#">
-                <img src="https://fakeimg.pl/246x192/" />
-                <span>Fotografar pássaros</span>
-            </a>
-            <a href="#">
-                <img src="https://fakeimg.pl/246x192/" />
-                <span>Foto para e-commerce </span>
-            </a>
-            <a href="#">
-                <img src="https://fakeimg.pl/246x192/" />
-                <span>Youtuber </span>
-            </a>
-            <a href="#">
-                <img src="https://fakeimg.pl/246x192/" />
-                <span>Fotográfia odontológica</span>
-            </a>
-            <a href="#">
-                <img src="https://fakeimg.pl/246x192/" />
-                <span>Fotográfia odontológica</span>
-            </a>
+            {{widget type="interface/widget_produtos" template="interface/widgets/produtos.phtml" identificador="showcasesuperkit" carrossel="1" limite="12" markup="<a href='@url' itemprop='url' title='Mais detalhes'>
+@foto(260x260)
+<span>@nome</span>
+</a>"}}
         </div>
         <div class="showcase-super-kit__footer">
             <a class="showcase-super-kit__more" href="#">

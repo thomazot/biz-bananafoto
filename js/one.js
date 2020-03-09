@@ -857,6 +857,7 @@ function default_categories_carrossel() {
             navigation: true,
             navigationText: ['?', '?'],
             pagination: false,
+            items: 6,
             afterInit: function() {
                 menu.addClass('loaded')
             },
@@ -892,11 +893,34 @@ function default_carrossel_produtos() {
                         }
                     },
                 })
-            }
-            if (
+            } else if (
                 $j(el)
                     .parent()
                     .attr('id') === 'showcase-banana'
+            ) {
+                $j(el).owlCarousel({
+                    navigation: true,
+                    navigationText: ['?', '?'],
+                    items: 4,
+                    itemsCustom: [
+                        [0, 1],
+                        [568, 1],
+                        [768, 2],
+                        [1024, 3],
+                        [1270, 4],
+                    ],
+                    beforeMove: function() {
+                        if (typeof $j.fn.lazyload != 'undefined') {
+                            $j(el)
+                                .find('img')
+                                .lazyload()
+                        }
+                    },
+                })
+            } else if (
+                $j(el)
+                    .parent()
+                    .attr('id') === 'showcasesuperkit'
             ) {
                 $j(el).owlCarousel({
                     navigation: true,
@@ -1562,12 +1586,18 @@ $j(document)
             checkCarousel($j(this))
         })
 
-        $j('.showcase-super-kit__main').owlCarousel({
-            itemsScaleUp: true,
-            navigation: true,
-            navigationText: ['?', '?'],
-            pagination: false,
-        })
+        // $j('.showcase-super-kit__main').owlCarousel({
+        //     itemsScaleUp: true,
+        //     navigation: true,
+        //     navigationText: ['?', '?'],
+        //     pagination: false,
+        // })
+
+        var categoryImage = $('.category-image')
+
+        if (categoryImage.length) {
+            $('.header-container').after(categoryImage)
+        }
     })
     .on('resizeStop', function(e) {
         // Safe window.resize

@@ -1,0 +1,40 @@
+.breadcrumb
+    @extend $container
+
+    li
+        line-height: 1
+
+    &__home
+        .breadcrumb__link:before
+            display: none !important
+
+    &__sep
+        margin: 0 5px
+
+        span
+            display: none
+
+        &:before
+            content: '>'
+            font-size: 12px
+
+    &__item a, &__last
+        color: #a3a3a3
+        font-weight: regular
+        font-size: 12px
+
+        span, a
+            line-height: 1
+            display: inline
+
+    &__last
+        color: var(--black)
+
+    &__home
+        .breadcrumb__link:before
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-right: 4px
+            color: #707070
+            line-height: 1
