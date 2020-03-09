@@ -1,4 +1,23 @@
 /*
+ * Variables
+ */
+:root
+    --red: #cc0404
+    --white: #fff
+    --black: #1b1b1b
+    --black-light: #737373
+    --gray: #f9f9f9
+    --menu-gray: #dcd9d9
+    --search-placeholder: #a0a0a0
+    --dots: #bcbcbc
+    --gray-dark: #dddddd
+    --dark: #000
+    --blue: #2146e3
+    --green: #06b506
+    --green-dark: #0a880a
+    --link: #444
+
+/*
  * Global
  * Elementos globais que podem ser extendidos ao longo do documento
  */
@@ -53,3 +72,16 @@ body
 
 .categories .ul--0
     max-width: viewport
+
+.wrapper
+    width: 100%
+    overflow: hidden
+
+    svg, path
+        fill: currentColor
+
+    @media (min-width: 993px)
+        padding-top: 148px
+
+    @media (max-width: 992px)
+        padding-top: 98px

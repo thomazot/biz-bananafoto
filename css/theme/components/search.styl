@@ -1,0 +1,65 @@
+.search
+    &__button
+        padding: 0
+        width: 50px
+        height: 42px
+        box-shadow: none
+        display: flex
+        justify-content: center
+        align-itens: center
+        border-radius: 0 4px 4px 0
+
+        .ico
+            width: 33px
+            height: 33px
+
+    &__input
+        &::placeholder
+            font-size: 14px
+            font-weight: regular
+            color: var(--search-placeholder)
+
+        &:focus::placeholder
+            color: transparent
+
+    @media (min-width: 569px)
+        background: var(--white)
+        border-radius: 4px
+
+        .header &
+            margin-left: 40px
+
+        &__input
+            box-shadow: none
+            height: 42px !important
+            border-radius: 4px 0 0 4px
+            border: 0 !important
+
+        &__button
+            background: var(--white)
+
+            .ico
+                fill: color2_bg
+
+            &:hover
+                background: none
+
+                .ico
+                    fill: color1_bg
+
+    @media (max-width: 568px)
+        &__button
+            background: none
+
+            &:hover
+                background: none
+
+        .header &.on .search__input
+            height: 55px
+            border-radius: 0
+
+        .header &__hide
+            height: 51px
+            display: flex
+            justify-content: center
+            align-items: center

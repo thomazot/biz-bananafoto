@@ -1,0 +1,48 @@
+.mycart
+    &__header
+        a
+            display: flex
+            padding-right: 12px
+            padding-top: 6px
+
+        .text
+            order: -1
+            font-size: 13px
+            font-weight: semibold
+            color: color1_bg
+            max-width: 95px
+            line-height: 1.1
+
+        .ico
+            width: 22px
+            height: 26px
+
+        .qtd
+            position: absolute
+            top: 0
+            right: 0
+            width: 21px
+            height: 21px
+            background: var(--red)
+            color: var(--white)
+            font-size: 12px
+            font-weight: bold
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 50%
+
+    &__content
+        display: none !important
+
+    @media (max-width: 992px)
+        &__header
+            a
+                height: 50px
+
+            .text
+                display: none
+
+    @media (min-width: 993px)
+        .header &
+            margin-left: 40px

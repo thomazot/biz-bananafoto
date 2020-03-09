@@ -1,4 +1,29 @@
 .header
     &-container
-        position: sticky
+        position: fixed
         top: 0
+        left: 0
+        width: 100%
+        background: color2_bg
+
+    @media (max-width: 568px)
+        padding-right: 16px
+        max-width: none
+        width: 100%
+
+    @media (min-width: 993px)
+        position: relative
+        z-index: 200
+        background: color2_bg
+        margin-bottom: 0 !important
+        padding-bottom: 16px
+        box-shadow: 800px 0 0 color2_bg, -800px 0 0 color2_bg
+        transition: all 0.2s ease-in-out
+
+        &-container
+            background: none
+            box-shadow: none
+
+        .scrolling &
+            padding-top: 8px
+            padding-bottom: 8px

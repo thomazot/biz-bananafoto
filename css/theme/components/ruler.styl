@@ -1,9 +1,33 @@
-#banner__ruler
-    font-size: 10px
-    font-weight: semi-bold
-    background: color1_bg
-    color: #fff
+.ruler
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    font-size: 14px
+    font-weight: regular
+    color: var(--black)
 
-    & .banner
-        &__wrapper
-            @extend $container
+    .ico
+        width: 40px
+        height: 40px
+        margin-right: 10px
+        color: color2_bg
+
+    strong, span
+        display: block
+        line-height: 1.2
+
+#banner__regua
+    position: relative
+    width: viewport
+    max-width: calc(100% - 32px)
+    margin: -16px auto 0
+
+    &:after
+        content: ''
+        height: 1px
+        width: 100vw
+        border-bottom: solid 1px var(--gray-dark)
+        position: absolute
+        top: 100%
+        left: 50%
+        transform: translateX(-50%)

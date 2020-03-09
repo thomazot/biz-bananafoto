@@ -16,7 +16,7 @@ icon(i)
 /**
  * Mixin - Font-weight
  */
-font = 'Poppins', sans-serif
+font = 'Open Sans', sans-serif
 light = 300
 regular = 400
 medium = 500
@@ -25,7 +25,7 @@ bold = 700
 /**
  * Mixin - Viewport
  */
-viewport = 980px
+viewport = 1170px
 gap = 32px
 /**
  * Mixin - Responsive
@@ -48,3 +48,179 @@ $container
     max-width: 'calc(100% - %s)' % gap
     margin-left: auto
     margin-right: auto
+
+category-block()
+    .categories
+        .parent:after
+            display: none
+
+        &--justify
+            width: 100%
+
+            .ul--1
+                width: auto
+                max-width: none
+                min-width: 0
+                flex: 1
+                display: block
+                width: 100%
+                column-count: 4
+                overflow: visible
+
+            .li--0
+                position: static
+                padding: 15px 4px
+                flex: 1 0 100px
+                min-width: 0
+                order: 1
+
+                &:hover
+                    .a--0
+                        background: #fff
+                        box-shadow: 0 0 0 2px color2_bg, 0 5px 0 color2_bg
+                        color: var(--black-light)
+
+                        svg
+                            color: color2_bg
+
+                    .box--1
+                        visibility: visible
+                        transform: translateX(-50%)
+                        left: 50%
+                        opacity: 1
+
+            .li--1
+                break-inside: avoid
+
+            .box--1
+                width: 100%
+                box-shadow: none
+                width: viewport
+                max-width: 100%
+                box-shadow: 800px 0 0 #fff, -800px 0 0 #fff
+                top: 100%
+                left: 50%
+                transform: translateX(-50%)
+                visibility: hidden
+                z-index: 20
+                transition: all 0.2s ease
+                opacity: 0
+                padding-top: 15px
+                padding-bottom: 15px
+
+            .a--0
+                background: #fff
+                display: flex
+                flex-flow: column nowrap
+                justify-content: center
+                color: var(--black-light)
+                font-size: 14px
+                font-weight: regular
+                white-space: wrap
+                height: auto
+                padding: 14px
+                height: 100%
+                border-radius: 4px
+
+                img
+                    height: 50px
+                    object-fit: contain
+                    margin: 0
+
+                svg
+                    width: 53px
+                    height: 36px
+                    color: var(--dark)
+                    margin: 0
+
+                span
+                    white-space: nowrap
+                    text-overflow: ellipsis
+                    line-height: 1.2
+                    display: block
+                    margin-top: 10px
+                    max-width: 100%
+                    overflow: hidden
+                    height: auto
+
+            .a--1
+                font-size: 18px
+                font-weight: semibold
+                color: color1_bg
+
+                &:hover
+                    box-shadow: none
+
+            .a--2
+                font-size: 16px
+                font-weight: regular
+                color: var(--black-light)
+                padding: 5px 0
+                display: flex
+                align-items: flex-start
+
+                &:before
+                    content: ''
+                    width: 10px
+                    height: 10px
+                    background: var(--menu-gray)
+                    margin: 7px 10px 0 0
+                    flex: 0 0 10px
+
+                &:hover
+                    color: color1_bg
+                    box-shadow: none
+
+                    &:before
+                        background: color2_bg
+
+        &__products, &__block
+            flex: 0 1 230px
+            border-left: 0
+            border: solid 2px color2_bg
+            border-radius: 8px
+
+            .title--sm
+                display: none
+
+            .product
+                &__main
+                    padding: 0
+                    margin-top: 15px
+                    text-align: center
+
+                &__name
+                    color: var(--black)
+                    font-size: 13px
+                    font-weight: regular
+                    margin-bottom: 5px
+
+            .products
+                &__case
+                    &:hover
+                        box-shadow: none
+
+            .old-price, .price-box-avista, .price-box-parcelado, .product-rate
+                display: none
+
+        &__all
+            .a--0
+                .z-more
+                    width: 32px
+                    height: 32px
+                    color: color2_bg
+
+                > span
+                    margin-top: 0
+
+                    span
+                        margin-top: 8px
+                        line-height: 1.2
+
+            &.li--0
+                order: 2
+
+                &:hover
+                    .a--0
+                        svg
+                            fill: color2_bg

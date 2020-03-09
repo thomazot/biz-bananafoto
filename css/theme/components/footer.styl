@@ -1,0 +1,173 @@
+.footer
+    margin-top: 60px
+
+    &__logo
+        text-align: center
+
+        img
+            width: 203px
+
+    .flex--a-center
+        justify-content: center
+
+    .socials
+        margin: 20px 0
+
+        img, svg
+            width: 25px
+            height: 25px
+
+        img
+            object-fit: contain
+
+        &__list
+            justify-content: center
+
+        &__link
+            width: 50px
+            height: 50px
+            border-radius: 50%
+            display: flex
+            justify-content: center
+            align-items: center
+            border: solid 2px #f1f0f2
+
+    .mymenu
+        .ul--0
+            display: flex
+            justify-content: center
+            flex-flow: row wrap
+
+        .li--0
+            &:not(:last-child)
+                margin-bottom: 0
+
+        .a--0
+            line-height: 14px
+
+    &__menu-institucional
+        .mymenu
+            .li--0
+                display: flex
+                align-items: center
+
+                + .li--0
+                    &:before
+                        content: ''
+                        width: 1px
+                        height: 14px
+                        background: var(--blue)
+                        display: inline-block
+
+            .a--0
+                font-size: 14px
+                font-weight: regular
+                color: var(--blue)
+                padding: 5px 15px
+
+                &:hover
+                    color: color2_bg
+
+    &__row
+        &--about
+            color: #7f7f7f
+            font-size: 14px
+            position: relative
+            left: 50%
+            transform: translateX(-50%)
+            width: 100vw
+            border-top: solid 1px #eeeeee
+            margin-top: 30px
+
+            strong
+                font-weight: regular
+                color: var(--black)
+
+            p
+                line-height: 1.5
+
+                + p
+                    margin-top: 15px
+
+            .footer__container
+                width: viewport
+                max-width: calc(100% - 32px)
+                margin: 0 auto
+                padding: 40px 0
+
+    &__title
+        font-size: 16px
+        font-weight: regular
+        color: #666666
+        text-align: center
+        padding: 20px 0
+
+    &__payments-security
+        background: var(--gray)
+        padding-bottom: 20px
+
+    &__copyright
+        text-align: center
+        color: #7f7f7f
+        font-size: 12px
+        font-weight: regular
+        padding: 10px 0 20px
+
+        p:first-child
+            color: var(--black)
+
+        .mymenu
+            margin-top: 20px
+
+            .li--0
+                display: flex
+                align-items: center
+
+                + .li--0
+                    &:before
+                        content: ''
+                        width: 1px
+                        height: 14px
+                        background: var(--black)
+                        display: inline-block
+
+            .a--0
+                font-size: 14px
+                font-weight: regular
+                color: var(--black)
+                padding: 5px 15px
+
+                &:hover
+                    text-decoration: underline
+
+    &__premium
+        background: #992806
+        display: flex
+        justify-content: center
+        flex-flow: row wrap
+
+        a
+            border: 0
+            display: block
+
+    .pays__img
+        height: 50px
+
+    @media (max-width: 992px)
+        &__payments-security
+            box-shadow: 200px 0 0 var(--gray), -200px 0 0 var(--gray)
+
+        &__premium
+            box-shadow: 200px 0 0 #992806, -200px 0 0 #992806
+
+    @media (min-width: 993px)
+        &__premium
+            box-shadow: 800px 0 0 #992806, -800px 0 0 #992806
+
+        &__payments-security
+            box-shadow: 800px 0 0 var(--gray), -800px 0 0 var(--gray)
+
+            .footer__container
+                display: flex
+                justify-content: space-between
+                align-items: flex-start
