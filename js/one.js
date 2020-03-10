@@ -1417,6 +1417,10 @@ $j.fn.neonTheme.custom = {
                 '.showcase-tabs__header .owl-next, .showcase-tabs__header .owl-prev',
             mode: 'html',
         },
+        'z-down': {
+            selector: '.bundle__caption label',
+            mode: 'append',
+        },
     },
 }
 
@@ -1568,6 +1572,38 @@ $j(window).resize(function() {
     })
 })
 
+function carouselProductImage($) {
+    var thumbs = $('.product-image-thumbs li').length
+    var index = 1
+
+    if (thumbs > 1) {
+        var container = $('.product-image-container')
+        var prev = $(
+            "<button class='prev' type='button'><svg class='ico z-prev'><use xlink:href='#z-prev' /></svg></button>"
+        )
+        var next = $(
+            "<button class='next' type='button'><svg class='ico z-next'><use xlink:href='#z-next' /></svg></button>"
+        )
+
+        container.append(prev).append(next)
+
+        prev.click(function() {
+            if (index - 1 === 0) index = thumbs
+            else index -= 1
+            $('.product-image-thumbs li:nth-child(' + index + ') a').trigger(
+                'click'
+            )
+        })
+        next.click(function() {
+            if (index + 1 > thumbs) index = 1
+            else index += 1
+            $('.product-image-thumbs li:nth-child(' + index + ') a').trigger(
+                'click'
+            )
+        })
+    }
+}
+
 $j(document)
     .ready(function($) {
         // document.ready
@@ -1586,18 +1622,19 @@ $j(document)
             checkCarousel($j(this))
         })
 
-        // $j('.showcase-super-kit__main').owlCarousel({
-        //     itemsScaleUp: true,
-        //     navigation: true,
-        //     navigationText: ['?', '?'],
-        //     pagination: false,
-        // })
+        carouselProductImage($)
 
         var categoryImage = $('.category-image')
 
         if (categoryImage.length) {
             $('.header-container').after(categoryImage)
         }
+
+        $('.bundle__caption').click(function() {
+            $(this)
+                .parent()
+                .toggleClass('on')
+        })
     })
     .on('resizeStop', function(e) {
         // Safe window.resize

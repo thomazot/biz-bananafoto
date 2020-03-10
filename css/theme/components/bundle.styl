@@ -1,0 +1,93 @@
+.bundle
+    &:before, .qty-holder
+        display: none
+
+    &__option
+        box-shadow: none
+        text-align: left
+        padding: 0
+        margin: 0
+
+        label
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 100%
+
+        .ico
+            width: 14px
+            height: 14px
+            margin-left: 20px
+            display: block
+
+        &.on
+            .ico
+                transform: rotate(180deg)
+
+        &:hover
+            box-shadow: none
+
+    &__caption
+        background: #f2f2f2
+        border-radius: 3px
+        min-height: 55px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        padding: 10px 30px
+        font-size: 14px
+        font-weight: regular
+        color: #444444
+        opacity: 1
+
+    &__content
+        display: none
+        text-align: left
+
+        .on &
+            display: block
+            margin-bottom: 20px
+
+    .options-bundle-images
+        display: none !important
+
+    .options-list li
+        font-size: 14px
+        font-weight: semibold
+        color: var(--blue)
+
+        input
+            display: none
+
+            &:checked + .label label
+                border-color: var(--blue)
+
+                &:before
+                    background: var(--blue)
+                    box-shadow: inset 0 0 0 5px var(--white)
+
+        label
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            border: solid 1px #dddddd
+            border-radius: 3px
+            min-height: 55px
+            padding: 10px 30px
+
+            &:before
+                content: ''
+                flex: 0 0 26px
+                width: 26px
+                height: 26px
+                border: solid 1px #dddddd
+                border-radius: 50%
+                margin-right: 15px
+
+        .price-notice
+            flex: 1 1 200px
+            min-width: 0
+            font-size: 12px
+            font-weight: semibold
+            color: var(--blue)
+            text-align: right

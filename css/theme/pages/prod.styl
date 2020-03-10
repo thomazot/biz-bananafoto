@@ -1,0 +1,428 @@
+.zoomContainer
+    display: none !important
+
+.prod
+    &__img
+        position: relative
+
+        .product-image-gallery
+            box-shadow: none
+
+        .product-image-container
+            .prev, .next
+                width: 34px
+                height: 60px
+                padding: 0
+                display: flex
+                justify-content: center
+                align-items: center
+                background: #fff
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+                color: var(--black)
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+
+                &:hover .ico
+                    fill: var(--black) !important
+
+            .prev
+                left: 0
+
+            .next
+                right: 0
+
+        .product-image-thumbs
+            justify-content: center
+            align-items: center
+
+            li:not(.video)
+                flex: 0 0 auto
+                min-width: 0
+                min-height: 0
+
+            .thumb-link
+                flex: 0 0 auto
+                border-radius: 50%
+                width: 8px
+                height: 8px
+                box-shadow: none
+                background: var(--dots)
+
+                img
+                    display: none
+
+                &.on
+                    width: 30px
+                    border-radius: 8px
+                    background: color2_bg
+
+        .product-image-thumbs
+            .video
+                position: absolute
+                top: 0
+                right: 0
+                width: 50px
+                height: 50px
+                min-width: 0
+                min-height: 0
+                display: flex
+                justify-content: center
+                align-items: center
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+                border-radius: 50%
+                padding: 0
+
+                .img
+                    display: none
+
+                .play
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    width: 26px
+                    height: 26px
+                    background: var(--youtube)
+                    border-radius: 50%
+
+                    .ico
+                        width: 10px
+                        height: 10px
+                        position: static
+
+            .video-thumb
+                background: #fff
+                background-image: none !important
+                box-shadow: none
+                flex: 0 0 auto
+
+    &__shop
+        --gray: #878787
+        --gray-light: #7d7d7d
+        text-align: center
+
+        .configurable-swatch-list
+            justify-content: center
+
+        .old-price
+            display: none
+
+        .regular-price, .special-price, .price-as-configured
+            .label
+                display: none
+
+            .price span
+                font-size: 35px
+                font-weight: regular
+                color: var(--blue)
+
+        .qty-wrapper
+            display: none
+
+        .add-to-cart-btn
+            padding: 0
+            height: 50px
+            width: 230px
+            max-width: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            font-size: 15px
+            font-weight: bold
+            background: var(--green)
+            box-shadow: none
+            border-radius: 50px
+            margin: 0 auto
+
+            span
+                display: inline
+                line-height: 1
+
+    &__tags
+        div
+            display: inline-block
+
+        .prolabel
+            position: static
+
+    &__review
+        display: flex
+        justify-content: center
+        flex: 1
+        min-width: 0
+
+        .product-rate
+            > a
+                display: none !important
+
+            .rating-box:before, .rating-box .rating:before
+                font-size: 15px
+
+            .rating:before
+                color: color2_bg
+
+            .amount .qtd
+                display: inline-block
+                font-size: 13px
+                color: #878787
+                margin-left: 5px
+                margin-top: -2px
+
+    &__head
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        margin-bottom: 20px
+
+    &__name h1
+        font-size: 25px
+        font-weight: regular
+        color: var(--blue)
+        line-height: 1.3
+        margin-bottom: 5px
+
+    &__sku
+        color: var(--gray)
+        font-size: 12px
+        font-weight: regular
+        text-transform: uppercase
+        margin-bottom: 20px
+        display: block
+
+    &__short-description
+        text-align: center
+        margin-bottom: 20px
+        font-size: 12px
+        line-height: 1.2
+
+    &__price-tabs
+        .price-box-avista
+            display: block
+            font-size: 12px
+            font-weight: regular
+            color: #848484
+            margin-bottom: 0
+
+            &:before
+                content: url(boleto)
+                display: inline-block
+                vertical-align: middle
+                margin-right: 5px
+
+            .price span
+                font-weight: semibold
+
+            .label
+                display: none
+
+            &:after
+                content: ' à vista no boleto bancário'
+
+        .price-box-parcelado
+            font-size: 12px
+            font-weight: regular
+            color: #848484
+            text-align: left
+            margin-bottom: 0
+
+            .preco-parcelado:before
+                content: url(card)
+                display: inline-block
+                vertical-align: middle
+                margin-right: 5px
+
+            .num, .value
+                span
+                    color: #848484
+                    font-weight: semibold
+
+    &__price-tab
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 15px 0
+        border-top: solid 1px #dddddd
+
+        a
+            font-size: 12px
+            font-weight: semibold
+            color: var(--blue)
+            display: none
+
+    &__categories
+        background: #f9f9f9
+        padding: 20px
+        text-align: center
+        font-size: 14px
+        font-weight: regular
+        color: #686c6f
+
+        .thumb
+            display: none
+
+        ul
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-flow: row wrap
+            font-size: 13px
+            font-weight: regular
+            color: var(--blue)
+            padding: 10px 0 0
+
+        a
+            font-size: 13px
+            font-weight: regular
+            color: var(--blue)
+            padding: 5px 10px
+
+            &:hover
+                color: color2_bg
+
+        li + li:before
+            content: '/'
+
+@media (max-width: 568px)
+    .prod
+        &__shop
+            .col1
+                margin-bottom: 0
+
+    .frete__title
+        font-size: 14px
+
+        .ico
+            margin-left: 0
+
+    .tabs
+        &__tab
+            &, &.on
+                font-size: 14px
+                font-weight: regular
+
+    .reviews__title
+        font-size: 14px
+
+@media (min-width: 569px)
+    .tabs
+        &__tab
+            font-size: 18px
+            font-weight: regular
+            color: var(--blue)
+            border: 0
+            position: relative
+            padding: 0
+            margin: 0
+            border-bottom: solid 1px #dddddd
+
+            &:after
+                content: ''
+                width: 10px
+                height: 10px
+                background: color2_bg
+                position: absolute
+                left: 50%
+                bottom: 0
+                transform: translateX(-50%)
+                border-radius: 50%
+                z-index: 10
+                display: block
+                margin-bottom: -4px
+                opacity: 0
+
+            &:before
+                content: ''
+                bottom: 2px
+                width: 100%
+                position: absolute
+                height: 5px
+                z-index: 15
+                background: #fff
+
+            &.on
+                top: 0
+                font-size: 18px
+                font-weight: bold
+                box-shadow: inset 0 -2px 0 color2_bg
+
+                &:after
+                    opacity: 1
+
+            &:first-child
+                padding-right: 10px
+
+            &:not(:first-child)
+                padding: 0 10px
+
+            &:not(:last-child)
+                margin-right: 0
+
+            &:nth-last-child(2)
+                flex: 1
+                min-width: 0
+
+        &__content
+            border: 0
+            padding: 20px 0
+
+@media (min-width: 993px)
+    .prod__img
+        flex: 0 0 500px
+
+    .frete
+        background: #f3f5f5
+        padding: 15px
+
+        &__title
+            display: none
+
+        &__naosei
+            font-size: 12px
+            color: #848484
+            line-height: 1.2
+
+        &__content
+            display: flex !important
+            justify-content: space-around
+            align-items: center
+
+            &:before
+                content: 'Simular frete e prazos'
+                font-size: 14px
+                font-weight: regular
+                color: var(--blackz)
+
+        &__form
+            border: solid 1px #dddddd
+            background: #fff
+            border-radius: 58px
+            padding-right: 7px
+            margin: 0 10px
+
+            label
+                display: none
+
+            .input-text
+                box-shadow: none
+                border: 0 !important
+                background: none
+                height: 58px
+
+            .btn
+                border-radius: 50%
+                width: 47px
+                height: 47px
+                padding: 0
+                display: flex
+                justify-content: center
+                align-items: center
+                font-size: 14px
+                font-weight: regular
+                text-transform: uppercase
+                background: color2_bg
+                color: var(--black)
+
+.prod
+    &__shop
+        .price-from, .price-to
+            display: none

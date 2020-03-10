@@ -1,0 +1,56 @@
+.reviews
+    .review-summary
+        justify-content: flex-start
+
+    &__content
+        display: flex
+        flex-wrap: wrap
+
+    &__resume, &__add, &__ratings
+        box-shadow: none
+
+    &__resume, &__add
+        order: 1
+        flex: 0 0 100%
+        min-width: 0
+
+    &__resume
+        .subtitle
+            display: none
+
+    &__add
+        input, textarea
+            box-shadow: none
+            border-radius: 30px
+
+        .btn
+            border-radius: 30px
+            background: color2_bg
+            max-width: 133px
+
+        .subtitle
+            font-size: 18px
+
+    &__ratings
+        order: 2
+        flex: 0 0 100%
+
+        .subtitle
+            display: none
+
+    &__list
+        overflow: visible
+        max-height: none
+        height: auto
+        color: #686c6f
+
+        .std
+            color: #686c6f
+
+    @media (min-width: 993px)
+        &__resume, &__add
+            order: 1
+            flex: 1
+
+        &__title
+            title()

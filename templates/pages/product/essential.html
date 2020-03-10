@@ -1,0 +1,51 @@
+<div class="prod__img">
+    @fotos
+    @compartilhar
+</div>
+<div class="prod__shop">	
+	<div class="col1">
+        <div class="prod__head"> 
+            <div class="prod__tags">@selos</div>
+            <div class="prod__review">@avaliacoes</div> 
+        </div>
+		<div class="prod__name">
+			<h1>@nome</h1>
+		</div>
+        <small class="prod__sku">{{atributo codigo="sku"}}</small>
+
+        @variacoes
+        
+        @if(is_disponivel)	
+            <div class="prod__prices">
+                @preco
+            </div>  
+            <div class="prod__short-description">@descricao(curta)</div>
+            <div class="prod__buys">
+                @bt(comprar)
+            </div>
+        @else(is_disponivel)		
+            <div class="prod__out">
+                <div class="title">Produto Esgotado</div>
+                @alertas
+            </div>
+        @endif(is_disponivel)
+
+
+        @if(is_disponivel)
+        <div class="prod__price-tabs">
+            <div class="prod__price-tab">
+                @preco(avista)
+            </div>
+            <div class="prod__price-tab">
+                @preco(parcelado) 
+                <a href="#">ver parcelas</a>
+            </div>
+        </div>
+        @endif(is_disponivel)
+
+        <div class="prod__shipping">
+            @simulador-frete
+        </div>
+        
+	</div>
+</div>

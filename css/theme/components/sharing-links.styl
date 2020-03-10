@@ -1,0 +1,32 @@
+.sharing-links
+    --gray: #ccc
+    margin: 20px 0
+
+    .list
+        justify-content: center
+
+        &:before
+            display: none
+
+    [class *=-share] a
+        background: none
+
+        .ico
+            fill: var(--gray)
+            width: 20px
+            height: 20px
+
+    .fb-share a:hover .ico
+        fill: var(--facebook)
+
+    .tt-share a:hover .ico
+        fill: var(--twitter)
+
+    .pt-share a:hover .ico
+        fill: var(--pinterest)
+
+    .tb-share a:hover .ico
+        fill: var(--thumblr)
+
+    .lk-share a:hover .ico
+        fill: var(--linkedin)
