@@ -1,0 +1,231 @@
+.cms-faq
+    .breadcrumb
+        position: relative
+        z-index: 10
+
+        &__item, &__last, &__sep
+            &, a
+                color: #fff
+                font-size: 12px
+
+.faq
+    padding-bottom: 50px
+
+    &__header
+        background: color1_bg
+        padding: 60px 0
+        left: 50%
+        position: relative
+        transform: translateX(-50%)
+        width: 100vw
+        margin-top: -50px
+
+    &__form
+        width: 625px
+        max-width: calc(100% - 32px)
+        margin: 0 auto
+        text-align: center
+
+        &-title
+            font-size: 21px
+            font-weight: medium
+            color: color2_bg
+
+        &-input
+            position: relative
+            margin: 10px 0
+            box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1)
+
+            input
+                font-size: 14px
+                font-weight: regular
+                color: #a0a0a0
+                padding-right: 60px
+
+            button
+                position: absolute
+                top: 0
+                right: 0
+                bottom: 0
+                width: 50px
+                background: none
+                box-shadow: none
+                color: color2_bg
+
+                &:hover .ico
+                    fill: color2_bg
+
+    &__menu
+        position: relative
+        left: 50%
+        width: 100vw
+        transform: translateX(-50%)
+        padding: 20px 0
+        border-bottom: solid 1px #e5e5e5
+
+        .ico
+            width: 50px
+            height: 50px
+
+        &-list
+            display: flex
+            justify-content: space-between
+
+        &-item
+            flex: 1
+            min-width: 0
+            margin: 0 10px
+
+            a
+                display: block
+                color: var(--black)
+                text-align: center
+                border: solid 1px #e5e5e5
+                border-radius: 4px
+                width: 100%
+                padding: 16px
+
+                &:hover
+                    box-shadow: 0 0 0 2px color2_bg, 0 5px 0 color2_bg
+
+            span
+                display: block
+                font-size: 14px
+                font-weight: regular
+                color: #737373
+
+    &__container
+        width: viewport
+        max-width: calc(100% - 32px)
+        margin: 0 auto
+
+    &__questions
+        margin: 60px 0 20px
+        text-align: center
+
+        p
+            margin: 0
+            font-size: 14px
+            font-weight: regular
+            font-style: italic
+            color: #737373
+            line-height: 1.2
+
+            strong
+                color: var(--black)
+
+    &__title-blue
+        color: var(--blue)
+        margin-bottom: 10px
+        font-size: 21px
+
+    &__grids
+        margin: 40px -10px
+
+    &__grid
+        padding: 20px
+        background: #f9f9f9
+        font-size: 14px
+        font-weight: regular
+        color: #747474
+        line-height: 1.5
+        margin: 10px !important
+        border-radius: 3pxz
+
+        &-title
+            font-size: 16px
+            font-weight: bold
+            color: #434343
+            margin-bottom: 15px
+
+        &-text
+            padding-bottom: 40px
+
+    &__normal p
+        font-style: normal
+
+    &__tabs
+        margin-top: 40px
+        border: solid 1px #dadada
+        border-radius: 3px
+
+    &__tab
+        padding: 15px 20px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        cursor: pointer
+
+        &:not(:first-child)
+            border-top: solid 1px #dadada
+
+        .ico
+            width: 34px
+            height: 34px
+            color: #dadada
+
+        &.on
+            .ico
+                color: color2_bg
+
+            + .faq__content
+                display: block
+
+    &__content
+        padding: 20px
+        border-top: solid 1px #dadada
+        font-size: 14px
+        font-weight: regular
+        color: #747474
+        display: none
+
+    &__help
+        background: #f9f9f9
+        padding: 50px 20px
+        margin: 20px 0
+        text-align: center
+
+        a
+            font-size: 14px
+            font-weight: bold
+            color: #000
+            background: color2_bg
+            text-transform: uppercase
+            width: 230px
+            height: 45px
+            max-width: calc(100% - 32px)
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 45px
+            margin: 10px auto
+
+        &-title
+            font-size: 24px
+            font-weight: semibold
+            color: #434343
+
+        &-description
+            color: #747474
+            font-size: 14px
+            font-weight: regular
+
+@media (min-width: 993px)
+    .faq
+        .owl-wrapper-outer
+            padding-top: 10px
+            padding-bottom: 10px
+            margin-top: -10px
+            margin-bottom: -10px
+
+        &__menu-list
+            padding: 0 100px
+
+        &__grids
+            display: flex
+            flex-flow: row wrap
+
+        &__grid
+            flex: 1 1 calc(50% - 40px)
+            min-width: 0
+            padding: 30px

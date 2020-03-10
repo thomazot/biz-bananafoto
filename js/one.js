@@ -1635,6 +1635,17 @@ $j(document)
                 .parent()
                 .toggleClass('on')
         })
+
+        $('.faq__menu-list').owlCarousel({
+            itemsScaleUp: true,
+            navigation: true,
+            navigationText: ['?', '?'],
+            pagination: false,
+        })
+
+        $('.faq__tab').click(function() {
+            $(this).toggleClass('on')
+        })
     })
     .on('resizeStop', function(e) {
         // Safe window.resize
