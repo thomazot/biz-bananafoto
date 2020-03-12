@@ -1421,6 +1421,10 @@ $j.fn.neonTheme.custom = {
             selector: '.bundle__caption label',
             mode: 'append',
         },
+        'z-wishlist': {
+            selector: '.add-to-links .link-wishlist a',
+            mode: 'html',
+        },
     },
 }
 
@@ -1524,8 +1528,8 @@ function showcaseTabs($) {
             [568, 3],
             [768, 5],
             [993, 6],
-            [1024, 6],
-            [1270, 6],
+            [1024, 8],
+            [1270, 8],
         ],
         navigation: true,
         navigationText: ['?', '?'],
@@ -1646,6 +1650,12 @@ $j(document)
         $('.faq__tab').click(function() {
             $(this).toggleClass('on')
         })
+
+        var titleRelated = $('.related__title')
+        if (titleRelated) {
+            titleRelated.html('<span>Quem viu este produto, </span>')
+            titleRelated.addClass('on')
+        }
     })
     .on('resizeStop', function(e) {
         // Safe window.resize

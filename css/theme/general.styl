@@ -148,7 +148,7 @@ category-block()
 
             .a--1
                 font-size: 18px
-                font-weight: semibold
+                font-weight: regular
                 color: color1_bg
 
                 &:hover
@@ -182,6 +182,8 @@ category-block()
             border-left: 0
             border: solid 2px color2_bg
             border-radius: 8px
+            position: relative
+            padding-bottom: 80px
 
             .title--sm
                 display: none
@@ -191,6 +193,7 @@ category-block()
                     padding: 0
                     margin-top: 15px
                     text-align: center
+                    position: static
 
                 &__name
                     color: var(--black)
@@ -198,8 +201,33 @@ category-block()
                     font-weight: regular
                     margin-bottom: 5px
 
+                    &:after
+                        content: 'Comprar'
+                        position: absolute
+                        width: calc(100% - 40px)
+                        height: 45px
+                        background: var(--green)
+                        color: var(--white)
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        bottom: 20px
+                        left: 50%
+                        transform: translateX(-50%)
+                        border-radius: 45px
+                        font-size: 14px
+                        font-weight: bold
+
             .products
+                &__item
+                    padding-bottom: 0
+
                 &__case
+                    position: static
+
+                    .price-box
+                        margin-bottom: 0
+
                     &:hover
                         box-shadow: none
 
@@ -207,6 +235,15 @@ category-block()
                 display: none
 
         &__all
+            .all-ul--2
+                display: none
+
+            .all-a--0
+                font-weight: regular
+
+                img, svg
+                    display: none
+
             .a--0
                 .z-more
                     width: 32px
@@ -233,13 +270,14 @@ title()
     border-bottom: solid 1px #dddddd
     font-size: 18px
     font-weight: regular
-    color: var(--blue)
+    color: var(--black)
 
     span
         position: relative
         box-shadow: inset 0 -2px 0 color2_bg
         padding: 20px 0
         display: inline-block
+        font-weight: semibold
 
         &:after
             content: ''

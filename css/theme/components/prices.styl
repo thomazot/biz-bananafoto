@@ -4,11 +4,17 @@
             display: none
 
     .regular-price, .special-price
-        .label span
+        .label
             font-size: 14px
             color: var(--black-light)
             display: block
             line-height: 1.2
+
+            &:before
+                content: 'A partir de'
+
+            span
+                display: none
 
         .price span
             font-size: 22px

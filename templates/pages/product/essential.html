@@ -1,6 +1,7 @@
 <div class="prod__img">
     @fotos
     @compartilhar
+    @links
 </div>
 <div class="prod__shop">	
 	<div class="col1">
@@ -41,11 +42,12 @@
                 <a href="#">ver parcelas</a>
             </div>
         </div>
-        @endif(is_disponivel)
+        
 
         <div class="prod__shipping">
             @simulador-frete
         </div>
+        @endif(is_disponivel)
         
 	</div>
 </div>

@@ -1,0 +1,28 @@
+.related
+    &__title
+        font-size: 14px
+        font-weight: regular
+        display: none
+
+        span
+            font-weight: semibold
+
+            &:after
+                font-weight: regular
+                content: 'também se interessou por'
+
+        &.on
+            display: flex
+
+    &__subtitle, &__add-checkbox
+        display: none
+
+    @media (min-width: 569px)
+        &__title
+            title()
+
+            &:after
+                font-weight: regular
+                content: 'também se interessou por'
+                padding: 1.25rem 0
+                padding-left: 5px
