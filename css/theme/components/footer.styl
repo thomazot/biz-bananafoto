@@ -1,6 +1,9 @@
 .footer
     margin-top: 60px
 
+    &-container
+        position: static
+
     &__logo
         text-align: center
 
@@ -12,6 +15,9 @@
 
     .socials
         margin: 20px 0
+
+        .flex > *
+            padding: 0 5px 10px
 
         img, svg
             width: 25px
@@ -184,12 +190,27 @@
 
         a
             border: 0
-            display: block
+            display: flex
+            height: 95px
+            justify-content: center
+            align-items: center
+            padding: 0 15px
+
+        [src*=mobile]
+            display: none
 
     .pays__img
         height: 50px
 
     @media (max-width: 992px)
+        .socials__link
+            width: 40px
+            height: 40px
+
+            svg, img
+                width: 20px
+                height: 20px
+
         &__payments-security
             box-shadow: 200px 0 0 var(--gray), -200px 0 0 var(--gray)
 
@@ -200,6 +221,12 @@
         &__premium
             box-shadow: 800px 0 0 #992806, -800px 0 0 #992806
 
+            a
+                padding: 0 50px
+
+                &:hover
+                    background: rgba(255, 255, 255, 0.06)
+
         &__payments-security
             box-shadow: 800px 0 0 var(--gray), -800px 0 0 var(--gray)
 
@@ -207,3 +234,23 @@
                 display: flex
                 justify-content: space-between
                 align-items: flex-start
+
+    @media (max-width: 500px)
+        &__premium
+            a
+                flex: 0 0 50%
+
+                &:nth-child(2), &:nth-child(3)
+                    background: rgba(255, 255, 255, 0.06)
+
+                &:nth-child(2)
+                    box-shadow: 100px 0 0 rgba(255, 255, 255, 0.06)
+
+                &:nth-child(3)
+                    box-shadow: -100px 0 0 rgba(255, 255, 255, 0.06)
+
+            [src*=mobile]
+                display: block
+
+            [src*='banana-midia.png']
+                display: none

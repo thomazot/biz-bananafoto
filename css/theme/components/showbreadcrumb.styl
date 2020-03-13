@@ -8,8 +8,8 @@
 
         &, a
             color: var(--black-light)
-            font-size: 14px
-            font-style: italic
+            font-size: 22px
+            font-weight: 300
 
         &:first-child
             &, a
@@ -28,8 +28,14 @@
             height: 11px
 
     @media (max-width: 992px)
+        text-align: center
+
         &__item
             max-width: calc(100% - 35px)
+
+            &:last-child
+                display: block
+                padding-top: 10px
 
     @media (min-width: 993px)
         display: flex

@@ -1,4 +1,7 @@
 .myaccount
+    .header &
+        height: auto
+
     &__header
         font-size: 13px
         font-weight: semibold
@@ -6,6 +9,9 @@
         display: flex
         align-items: center
         max-width: 125px
+
+        a
+            text-decoration: underline
 
         div
             padding-right: 5px
@@ -16,11 +22,11 @@
             width: 25px
             height: 27px
 
-    &__content
-        display: none !important
-
     @media (max-width: 992px)
         height: auto
+
+        .header &
+            display: none
 
         &__header
             display: flex

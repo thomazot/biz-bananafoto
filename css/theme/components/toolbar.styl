@@ -1,4 +1,4 @@
-.toolbar
+.col-main > .toolbar
     padding: 30px 0
 
     .amount, .limiter
@@ -51,3 +51,64 @@
             background: none
             content: ''
             border-bottom: solid 1px var(--gray-dark)
+
+.toolbar-bottom
+    .toolbar
+        position: relative
+        padding-top: 20px
+
+        &:before
+            position: absolute
+            left: 50%
+            top: 0
+            width: 100vw
+            height: 1px
+            background: none
+            content: ''
+            transform: translateX(-50%)
+            border-top: solid 1px var(--gray-dark)
+
+        .amount
+            display: none
+
+        .pager
+            width: 100%
+
+            ol
+                justify-content: center
+
+                li
+                    padding: 5px
+
+            a, .current > span
+                min-width: 0
+                width: 40px
+                height: 40px
+                background: #fff
+                border: solid 1px var(--gray-dark)
+                border-radius: 50%
+                line-height: 1
+                display: flex
+                justify-content: center
+                align-items: center
+                color: var(--black)
+
+                &:hover
+                    background: color2_bg
+
+                span
+                    display: inline
+                    line-height: 1
+
+                &.next, &.previous
+                    background: var(--gray-dark)
+
+                    span
+                        display: none
+
+            .current > span
+                background: color2_bg
+
+                span
+                    background: none
+                    color: var(--black)

@@ -1,16 +1,23 @@
 
 .categories
     &__show
+        width: 44px
+        height: 44px
+        background: none
+        border: solid 1px color1_bg
+        border-radius: 0
+
         .ico
             width: 24px
             height: 24px
+            fill: color1_bg
 
         &:before
             display: none
 
     &__hide
-        color: color1_bg
-        background: color2_bg
+        color: color2_bg
+        background: color1_bg
 
     .header-container &
         .all-a--1, .all-a--2, .a--1, .a--2
@@ -18,7 +25,7 @@
                 display: none
 
     @media (max-width: 992px)
-        background: color2_bg
+        background: #692212
 
         .parent
             position: relative
@@ -49,7 +56,7 @@
                 font-size: 20px
                 background: rgba(255, 255, 255, 0.1)
                 transition: all 0.2s ease
-                color: color1_bg
+                color: color2_bg
 
             &.on
                 &:after

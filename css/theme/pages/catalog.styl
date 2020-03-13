@@ -80,7 +80,7 @@
         .main
             position: static
             display: grid
-            grid-template-areas: 'category category' 'filters toolbar' 'main main' 'description description'
+            grid-template-areas: 'category category' 'filters toolbar' 'main main' 'toolbarb toolbarb' 'description description'
             grid-template-columns: 2fr 170px
 
         .category-block-mode
@@ -99,11 +99,11 @@
             align-items: start
             grid-area: toolbar
 
+            &-bottom
+                grid-area: toolbarb
+
         .category__products
             grid-area: main
-
-        .toolbar-bottom
-            display: none
 
     @media (max-width: 992px)
         .col-main

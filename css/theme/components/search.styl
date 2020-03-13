@@ -38,6 +38,9 @@
         &__button
             background: var(--white)
 
+            .z-lupa
+                display: none
+
             .ico
                 fill: color2_bg
 
@@ -51,15 +54,23 @@
         &__button
             background: none
 
+            .z-search
+                display: none
+
+            .ico
+                width: 22px
+                height: 22px
+                fill: color1_bg
+
             &:hover
                 background: none
 
         .header &.on .search__input
-            height: 55px
+            height: 65px
             border-radius: 0
 
         .header &__hide
-            height: 51px
+            height: 61px
             display: flex
             justify-content: center
             align-items: center

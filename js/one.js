@@ -949,7 +949,7 @@ function default_carrossel_produtos() {
                     navigationText: ['?', '?'],
                     items: 5,
                     itemsCustom: [
-                        [0, 1],
+                        [0, 2],
                         [568, 2],
                         [768, 3],
                         [1024, 4],
@@ -1514,6 +1514,10 @@ function scrollTop() {
         } else {
             body.removeClass('scrolling--up').removeClass('scrolling--down')
         }
+
+        if (scrollTop > $j('body').height() / 2) {
+            body.addClass('show-go-top')
+        } else body.removeClass('show-go-top')
     })
 }
 
@@ -1656,6 +1660,11 @@ $j(document)
             titleRelated.html('<span>Quem viu este produto, </span>')
             titleRelated.addClass('on')
         }
+
+        $('.go-to-top').click(function(event) {
+            event.preventDefault()
+            $('html, body').animate({ scrollTop: 0 }, 'slow')
+        })
     })
     .on('resizeStop', function(e) {
         // Safe window.resize
