@@ -2,14 +2,14 @@
     display: flex
     justify-content: flex-start
     align-items: center
-    font-size: 14px
-    font-weight: regular
     color: var(--black)
+    font-weight: regular
+    font-size: 14px
 
     .ico
+        margin-right: 10px
         width: 40px
         height: 40px
-        margin-right: 10px
         color: color2_bg
 
     strong, span
@@ -18,16 +18,16 @@
 
 #banner__regua
     position: relative
-    width: viewport
-    max-width: calc(100% - 32px)
     margin: -16px auto 0
+    max-width: calc(100% - 32px)
+    width: viewport
 
     &:after
-        content: ''
-        height: 1px
-        width: 100vw
-        border-bottom: solid 1px var(--gray-dark)
         position: absolute
         top: 100%
         left: 50%
+        width: 100vw
+        height: 1px
+        border-bottom: solid 1px var(--gray-dark)
+        content: ''
         transform: translateX(-50%)

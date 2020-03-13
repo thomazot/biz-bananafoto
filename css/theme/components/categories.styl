@@ -3,9 +3,9 @@
     &__show
         width: 44px
         height: 44px
-        background: none
         border: solid 1px color1_bg
         border-radius: 0
+        background: none
 
         .ico
             width: 24px
@@ -16,8 +16,8 @@
             display: none
 
     &__hide
-        color: color2_bg
         background: color1_bg
+        color: color2_bg
 
     .header-container &
         .all-a--1, .all-a--2, .a--1, .a--2
@@ -38,12 +38,13 @@
 
             > a
                 display: flex
-                min-height: 48px
                 justify-content: flex-start
                 align-items: center
+                min-height: 48px
 
             &:after
                 icon('\f054')
+
                 position: absolute
                 top: 0
                 right: 0
@@ -53,10 +54,10 @@
                 align-items: center
                 width: 48px
                 height: 48px
-                font-size: 20px
-                background: rgba(255, 255, 255, 0.1)
-                transition: all 0.2s ease
+                background: rgba(255, 255, 255, .1)
                 color: color2_bg
+                font-size: 20px
+                transition: all .2s ease
 
             &.on
                 &:after
@@ -70,38 +71,38 @@
 
     @media (min-width: 993px)
         .menu__categories &
-            opacity: 0
+            position: absolute
+            top: 100%
+            left: 0
             visibility: hidden
             margin-bottom: 0 !important
-            position: absolute
-            left: 0
-            top: 100%
             background: var(--white)
+            opacity: 0
 
             .ul--0
                 position: static
-                background: var(--gray)
-                width: viewport
-                max-width: calc(100% - 32px)
-                box-shadow: 800px 0 0 var(--gray), -800px 0 0 var(--gray)
                 align-items: stretch
                 margin: 0 auto
+                max-width: calc(100% - 32px)
+                width: viewport
+                background: var(--gray)
+                box-shadow: 800px 0 0 var(--gray), -800px 0 0 var(--gray)
 
             .li--0
                 &:after
-                    content: ''
                     position: fixed
                     top: 248px
                     left: 0
-                    width: 100%
-                    height: 100vh
-                    background: rgba(0, 0, 0, 0.5)
                     z-index: 10
                     visibility: hidden
+                    width: 100%
+                    height: 100vh
+                    background: rgba(0, 0, 0, .5)
+                    content: ''
 
                 &:hover:after
                     visibility: visible
 
         .menu__categories:hover &
-            opacity: 1
             visibility: visible
+            opacity: 1

@@ -17,23 +17,23 @@
                     position: static !important
 
     &__header
-        text-align: center
         padding: 20px 0
+        text-align: center
 
     &__title
-        font-size: 21px
-        font-weight: regular
         color: var(--black)
+        font-weight: regular
+        font-size: 21px
 
         .ico
             color: color2_bg
 
     &__descriptions
-        font-size: 14px
+        color: var(--black)
         font-weight: regular
         font-style: normal
-        color: var(--black)
-        opacity: 0.7
+        font-size: 14px
+        opacity: .7
 
         strong
             font-weight: bold !important
@@ -42,9 +42,9 @@
         background: var(--gray)
 
     &__label
-        font-size: 20px
-        font-weight: regular
         color: var(--black)
+        font-weight: regular
+        font-size: 20px
 
         span, strong, small
             display: block
@@ -52,14 +52,14 @@
 
         small
             font-size: 14px
-            opacity: 0.7
+            opacity: .7
 
     @media (min-width: 993px)
         &__main
-            box-shadow: 800px 0 0 var(--gray), -800px 0 0 var(--gray)
             display: flex
-            padding: 10px 0
             align-items: center
+            padding: 10px 0
+            box-shadow: 800px 0 0 var(--gray), -800px 0 0 var(--gray)
 
         &__label
             flex: 0 1 170px

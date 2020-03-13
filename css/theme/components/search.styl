@@ -1,13 +1,13 @@
 .search
     &__button
+        display: flex
+        justify-content: center
         padding: 0
         width: 50px
         height: 42px
-        box-shadow: none
-        display: flex
-        justify-content: center
-        align-itens: center
         border-radius: 0 4px 4px 0
+        box-shadow: none
+        align-itens: center
 
         .ico
             width: 33px
@@ -15,25 +15,25 @@
 
     &__input
         &::placeholder
-            font-size: 14px
-            font-weight: regular
             color: var(--search-placeholder)
+            font-weight: regular
+            font-size: 14px
 
         &:focus::placeholder
             color: transparent
 
     @media (min-width: 569px)
-        background: var(--white)
         border-radius: 4px
+        background: var(--white)
 
         .header &
             margin-left: 40px
 
         &__input
-            box-shadow: none
             height: 42px !important
-            border-radius: 4px 0 0 4px
             border: 0 !important
+            border-radius: 4px 0 0 4px
+            box-shadow: none
 
         &__button
             background: var(--white)
@@ -70,7 +70,7 @@
             border-radius: 0
 
         .header &__hide
-            height: 61px
             display: flex
             justify-content: center
             align-items: center
+            height: 61px

@@ -11751,6 +11751,7 @@ body {
   position: absolute;
   top: 0;
   right: 3.75rem;
+  width: 3rem;
 }
 .add-to-links li.link-wishlist .ico {
   width: 1.44rem;
@@ -12697,6 +12698,11 @@ body {
 }
 .go-to-top .ico {
   transform: rotate(-90deg);
+}
+@media (max-width: 1170px) {
+  .go-to-top {
+    right: 1.25rem;
+  }
 }
 
 .header-container {
@@ -14242,6 +14248,17 @@ body {
 .showcase-tabs__header {
   border-bottom: solid 1px var(--gray-dark);
   margin-bottom: 1.25rem;
+}
+.showcase-tabs__header .owl-carousel .owl-stage {
+  display: flex;
+}
+.showcase-tabs__header .owl-item {
+  width: -webkit-max-content !important;
+  width: -moz-max-content !important;
+  width: max-content !important;
+}
+.showcase-tabs__header .owl-item +.owl-item {
+  margin-left: 2.5rem;
 }
 .showcase-tabs__header.carousel-actived {
   padding: 0 2.5rem;

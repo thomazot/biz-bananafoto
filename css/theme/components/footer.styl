@@ -30,13 +30,13 @@
             justify-content: center
 
         &__link
-            width: 50px
-            height: 50px
-            border-radius: 50%
             display: flex
             justify-content: center
             align-items: center
+            width: 50px
+            height: 50px
             border: solid 2px #f1f0f2
+            border-radius: 50%
 
         li[class*=facebook] a:hover
             background: var(--facebook)
@@ -77,8 +77,8 @@
     .mymenu
         .ul--0
             display: flex
-            justify-content: center
             flex-flow: row wrap
+            justify-content: center
 
         .li--0
             &:not(:last-child)
@@ -95,35 +95,35 @@
 
                 + .li--0
                     &:before
-                        content: ''
+                        display: inline-block
                         width: 1px
                         height: 14px
                         background: var(--blue)
-                        display: inline-block
+                        content: ''
 
             .a--0
-                font-size: 14px
-                font-weight: regular
-                color: var(--blue)
                 padding: 5px 15px
+                color: var(--blue)
+                font-weight: regular
+                font-size: 14px
 
                 &:hover
                     color: color2_bg
 
     &__row
         &--about
-            color: #7f7f7f
-            font-size: 14px
             position: relative
             left: 50%
-            transform: translateX(-50%)
+            margin-top: 30px
             width: 100vw
             border-top: solid 1px #eeeeee
-            margin-top: 30px
+            color: #7f7f7f
+            font-size: 14px
+            transform: translateX(-50%)
 
             strong
-                font-weight: regular
                 color: var(--black)
+                font-weight: regular
 
             p
                 line-height: 1.5
@@ -132,28 +132,28 @@
                     margin-top: 15px
 
             .footer__container
-                width: viewport
-                max-width: calc(100% - 32px)
                 margin: 0 auto
                 padding: 40px 0
+                max-width: calc(100% - 32px)
+                width: viewport
 
     &__title
-        font-size: 16px
-        font-weight: regular
+        padding: 20px 0
         color: #666666
         text-align: center
-        padding: 20px 0
+        font-weight: regular
+        font-size: 16px
 
     &__payments-security
-        background: var(--gray)
         padding-bottom: 20px
+        background: var(--gray)
 
     &__copyright
-        text-align: center
-        color: #7f7f7f
-        font-size: 12px
-        font-weight: regular
         padding: 10px 0 20px
+        color: #7f7f7f
+        text-align: center
+        font-weight: regular
+        font-size: 12px
 
         p:first-child
             color: var(--black)
@@ -167,34 +167,34 @@
 
                 + .li--0
                     &:before
-                        content: ''
+                        display: inline-block
                         width: 1px
                         height: 14px
                         background: var(--black)
-                        display: inline-block
+                        content: ''
 
             .a--0
-                font-size: 14px
-                font-weight: regular
-                color: var(--black)
                 padding: 5px 15px
+                color: var(--black)
+                font-weight: regular
+                font-size: 14px
 
                 &:hover
                     text-decoration: underline
 
     &__premium
-        background: #992806
         display: flex
-        justify-content: center
         flex-flow: row wrap
+        justify-content: center
+        background: #992806
 
         a
-            border: 0
             display: flex
-            height: 95px
             justify-content: center
             align-items: center
             padding: 0 15px
+            height: 95px
+            border: 0
 
         [src*=mobile]
             display: none
@@ -225,7 +225,7 @@
                 padding: 0 50px
 
                 &:hover
-                    background: rgba(255, 255, 255, 0.06)
+                    background: rgba(255, 255, 255, .06)
 
         &__payments-security
             box-shadow: 800px 0 0 var(--gray), -800px 0 0 var(--gray)
@@ -241,13 +241,13 @@
                 flex: 0 0 50%
 
                 &:nth-child(2), &:nth-child(3)
-                    background: rgba(255, 255, 255, 0.06)
+                    background: rgba(255, 255, 255, .06)
 
                 &:nth-child(2)
-                    box-shadow: 100px 0 0 rgba(255, 255, 255, 0.06)
+                    box-shadow: 100px 0 0 rgba(255, 255, 255, .06)
 
                 &:nth-child(3)
-                    box-shadow: -100px 0 0 rgba(255, 255, 255, 0.06)
+                    box-shadow: -100px 0 0 rgba(255, 255, 255, .06)
 
             [src*=mobile]
                 display: block

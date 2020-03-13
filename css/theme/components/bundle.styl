@@ -3,10 +3,10 @@
         display: none
 
     &__option
+        margin: 0
+        padding: 0
         box-shadow: none
         text-align: left
-        padding: 0
-        margin: 0
 
         label
             display: flex
@@ -15,10 +15,10 @@
             width: 100%
 
         .ico
+            display: block
+            margin-left: 20px
             width: 14px
             height: 14px
-            margin-left: 20px
-            display: block
 
         &.on
             .ico
@@ -28,16 +28,16 @@
             box-shadow: none
 
     &__caption
-        background: #f2f2f2
-        border-radius: 3px
-        min-height: 55px
         display: flex
         justify-content: flex-start
         align-items: center
         padding: 10px 30px
-        font-size: 14px
-        font-weight: regular
+        min-height: 55px
+        border-radius: 3px
+        background: #f2f2f2
         color: #444444
+        font-weight: regular
+        font-size: 14px
         opacity: 1
 
     &__content
@@ -52,9 +52,9 @@
         display: none !important
 
     .options-list li
-        font-size: 14px
-        font-weight: semibold
         color: var(--link)
+        font-weight: semibold
+        font-size: 14px
 
         input
             display: none
@@ -70,24 +70,24 @@
             display: flex
             justify-content: flex-start
             align-items: center
+            padding: 10px 30px
+            min-height: 55px
             border: solid 1px #dddddd
             border-radius: 3px
-            min-height: 55px
-            padding: 10px 30px
 
             &:before
-                content: ''
                 flex: 0 0 26px
+                margin-right: 15px
                 width: 26px
                 height: 26px
                 border: solid 1px #dddddd
                 border-radius: 50%
-                margin-right: 15px
+                content: ''
 
         .price-notice
             flex: 1 1 200px
             min-width: 0
-            font-size: 12px
-            font-weight: semibold
             color: var(--blue)
             text-align: right
+            font-weight: semibold
+            font-size: 12px
