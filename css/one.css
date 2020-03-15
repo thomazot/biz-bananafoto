@@ -14540,6 +14540,7 @@ body {
     align-items: center;
   }
   .shipping .title {
+    margin-bottom: 0;
     padding-right: 1.25rem;
   }
   .shipping__form {
