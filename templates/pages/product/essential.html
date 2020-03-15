@@ -1,3 +1,19 @@
+
+@if(!is_simple)
+<div class="prod__header">
+    <div class="prod__head"> 
+        <div class="prod__tags">@selos</div>
+        <div class="prod__review">@avaliacoes</div> 
+    </div>
+    <div class="prod__name">
+        <h1>@nome</h1>
+    </div>
+    <small class="prod__sku">{{atributo codigo="sku"}}</small>
+    <div class="prod__short-description">@descricao(curta)</div>
+</div>
+@endif(!is_simple)
+
+
 <div class="prod__img">
     @fotos
     @compartilhar
@@ -5,6 +21,7 @@
 </div>
 <div class="prod__shop">	
 	<div class="col1">
+        @if(is_simple)
         <div class="prod__head"> 
             <div class="prod__tags">@selos</div>
             <div class="prod__review">@avaliacoes</div> 
@@ -13,17 +30,26 @@
 			<h1>@nome</h1>
 		</div>
         <small class="prod__sku">{{atributo codigo="sku"}}</small>
+        @endif(is_simple)
 
         @variacoes
         
         @if(is_disponivel)	
+            @if(!is_simple)
+                <div class="prod__row">
+            @endif(!is_simple)
             <div class="prod__prices">
                 @preco
             </div>  
+            @if(is_simple)
             <div class="prod__short-description">@descricao(curta)</div>
+            @endif(is_simple)
             <div class="prod__buys">
                 @bt(comprar)
             </div>
+            @if(!is_simple)
+            </div>
+            @endif(!is_simple)
         @else(is_disponivel)		
             <div class="prod__out">
                 <div class="title">Produto Esgotado</div>
@@ -36,10 +62,15 @@
         <div class="prod__price-tabs">
             <div class="prod__price-tab">
                 @preco(avista)
+                <div class="extra">( com 10% de desconto )</div>
+            </div>
+            <div class="prod__price-tab prod__price-tab--card">
+                <div class="card">@preco(avista)</div>
+                <div class="extra">( com 10% de desconto )</div>
             </div>
             <div class="prod__price-tab">
                 @preco(parcelado) 
-                <a href="#">ver parcelas</a>
+                <a href="javascript: void(0)" onclick="modal_open('modal-payments')">ver parcelas</a>
             </div>
         </div>
         
@@ -51,3 +82,5 @@
         
 	</div>
 </div>
+<div id="modal-payments">@parcelamento</div>
+<script>modal('modal-payments');</script>

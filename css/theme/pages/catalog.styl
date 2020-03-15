@@ -77,6 +77,10 @@
         .col-main
             display: contents
 
+        .col-left
+            position: relative
+            z-index: 100
+
         .main
             position: static
             display: grid
@@ -103,7 +107,21 @@
                 grid-area: toolbarb
 
         .category__products
+            position: relative
+            margin-top: 5px
+            padding-top: 50px
             grid-area: main
+
+            &:before
+                position: absolute
+                top: 0
+                left: 50%
+                width: 100vw
+                height: 1px
+                border-bottom: solid 1px var(--gray-dark)
+                background: none
+                content: ''
+                transform: translateX(-50%)
 
     @media (max-width: 992px)
         .col-main

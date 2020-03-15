@@ -1,0 +1,75 @@
+.cart-cupom
+    .cart &
+        &__title
+            padding: 20px
+            width: 100%
+            border-radius: 3px
+            background: var(--gray)
+            box-shadow: none
+            color: var(--blue)
+            text-transform: none
+            font-weight: regular
+            font-size: 13px
+            line-height: 1.2
+
+    &__ico
+        position: relative
+        top: -50px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0 auto
+        width: 93px
+        height: 93px
+        border: solid 4px #fff
+        border-radius: 50%
+        background: color2_bg
+        box-shadow: 0 0 10px rgba(0, 0, 0, .1)
+
+        .ico
+            width: 45px
+            height: 45px
+            fill: color1_bg
+
+    .modal__content &
+        margin-top: 20px
+        padding: 0 50px 50px
+        background: var(--gray)
+        text-align: center
+
+        &__title
+            margin-top: -40px
+            color: var(--black)
+            font-weight: semibold
+            font-size: 18px
+
+        &__description
+            margin: 10px 0
+            color: #676a6c
+            font-weight: 300
+            font-size: 12px
+
+    @media (min-width: 993px)
+        .cart &
+            &__title
+                height: 95px
+
+                &:hover
+                    box-shadow: 0 0 0 1px var(--blue)
+
+.coupon
+    padding: 10px
+    border: solid 1px color2_bg
+    border-radius: 3px
+
+    .title
+        display: none
+
+    .input-text
+        border: 0 !important
+
+    .btn
+        padding: 15px 30px
+        background: color2_bg
+        box-shadow: none
+        color: var(--black)

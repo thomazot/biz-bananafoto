@@ -1425,6 +1425,14 @@ $j.fn.neonTheme.custom = {
             selector: '.add-to-links .link-wishlist a',
             mode: 'html',
         },
+        'z-qty-more': {
+            selector: '.qty-wrapper .bt.plus',
+            mode: 'html',
+        },
+        'z-qty-less': {
+            selector: '.qty-wrapper .bt.less',
+            mode: 'html',
+        },
     },
 }
 

@@ -1,0 +1,167 @@
+.checkout-cart-index
+    background: #f3f4f6
+
+    .wrapper
+        padding-top: 82px
+
+    .breadcrumb, .newsletter, .footer__premium
+        display: none
+
+    .header-container
+        .search, .myaccount, .mycart, .menu
+            display: none
+
+        .logo
+            flex: 1
+            min-width: 0
+
+        .header
+            padding: 15px
+
+            &:after
+                margin-left: 20px
+                width: 192px
+                height: 47px
+                background: url(security) no-repeat center
+                background-size: contain
+                content: ''
+
+    .footer__row
+        &:nth-child(1), &:nth-child(2)
+            display: none
+
+    .footer__copyright
+        .mymenu
+            display: none
+
+    @media (max-width: 992px)
+        .header-container
+            .header
+                &:after
+                    flex: 1
+                    min-width: 0
+
+    .title--cart
+        margin: 20px 0 30px
+        padding-bottom: 20px
+        border-bottom: solid 2px var(--select)
+
+        h1
+            font-weight: regular
+            font-size: 26px
+
+            strong
+                color: var(--blue)
+
+        @media (max-width: 992px)
+            h1
+                span
+                    display: block
+
+        @media (max-width: 500px)
+            h1
+                text-align: center
+                font-size: 18pxv
+
+.cart
+    .btn-checkout
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 53px
+        border-radius: 53px
+        background: var(--green)
+        color: var(--white)
+        text-transform: none
+        font-weight: regular
+        font-size: 16px
+
+    .btn-continue
+        width: 100%
+        box-shadow: none
+        color: var(--blue)
+        text-transform: none
+        font-weight: regular
+        font-size: 13px
+
+        &:hover
+            background: none
+            text-decoration: underline
+
+    &__products, &__resume
+        padding: 20px
+        border-radius: 2px
+        background: #fff
+
+    &__products
+        margin-top: 40px
+
+    &__shipping
+        margin-top: 20px
+
+    &__resume
+        padding: 50px 30px
+
+        table tbody td:last-child
+            .price
+                font-weight: 600
+
+        .totals
+            padding: 0
+            box-shadow: none
+
+            .title
+                display: none
+
+            &__content
+                margin: 0
+
+            &__table
+                margin-bottom: 20px
+
+                tbody td
+                    padding-left: 0
+
+                tfoot td
+                    padding: 15px 16px
+                    background: var(--gray)
+
+                    &:first-child strong
+                        font-weight: 400
+
+                    &:last-child strong
+                        color: var(--blue)
+                        font-weight: 400
+                        font-size: 24px
+
+    @media (max-width: 992px)
+        &__resume
+            margin-top: 20px
+
+    @media (min-width: 993px)
+        display: flex
+
+        &__products
+            flex: 1
+            min-width: 0
+
+            .cart-price-head, .product-cart-price
+                display: none
+
+        &__resume
+            flex: 0 1 350px
+            margin-left: 20px
+
+        &__shipping-cupom
+            display: flex
+            align-items: flex-start
+
+        &__shipping
+            flex: 1
+            min-width: 0
+
+        &__cupom
+            flex: 0 1 190px
+            margin-top: 20px
+            margin-left: 10px

@@ -1,0 +1,56 @@
+.cart-product-line > .product-cart-actions, .cart-table .cart-qty-head
+    flex: 1 1 20%
+
+.cart-product-line > .product-cart-total, .cart-table .cart-total-head
+    flex: 0 0 20%
+
+.cart-table
+    margin: 0
+
+    .column-change-product
+        display: none
+
+    .product-cart-price, .product-cart-total
+        .price
+            color: #222
+            font-weight: regular
+            font-size: 14px
+
+    h2.name
+        line-height: 1
+
+        a
+            color: var(--link)
+            font-weight: regular
+            font-size: 13px
+
+    .sku
+        color: var(--black-light)
+        font-weight: regular
+        font-size: 11px
+
+        &:before
+            content: '('
+
+        &:after
+            content: ')'
+
+    header
+        border: solid 1px var(--select)
+        border-bottom: 0
+        background: var(--gray)
+        color: color1_bg
+        text-transform: none
+        font-weight: regular
+        font-size: 14px
+
+    footer
+        display: none
+
+    .btn-remove:before
+        color: var(--red)
+        font-size: 26px
+
+    @media (max-width: 500px)
+        .product-image
+            flex: 0 0 50px

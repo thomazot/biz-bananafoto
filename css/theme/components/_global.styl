@@ -32,6 +32,18 @@
 .container
     @extend $container
 
+input[type=text], input[type=password], input[type=search], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=date], input[type=mounth], input[type=week], input[type=time], input[type=datetime], input[type=datetime-local], input[type=color]
+    border: solid 1px var(--select)
+    box-shadow: none
+
+    &::placeholder
+        color: var(--search-placeholder)
+        font-weight: regular
+        font-size: 14px
+
+    &:focus::placeholder
+        color: transparent
+
 /*
  * Base
  * Estilo base do elementos do Html

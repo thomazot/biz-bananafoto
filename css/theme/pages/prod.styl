@@ -140,11 +140,14 @@
                 line-height: 1
 
     &__tags
-        div
-            display: inline-block
+        > div
+            display: flex
 
         .prolabel
             position: static
+
+            + .prolabel
+                margin-left: 5px
 
     &__review
         display: flex
@@ -177,7 +180,7 @@
 
     &__name h1
         margin-bottom: 5px
-        color: var(--blue)
+        color: var(--black)
         font-weight: regular
         font-size: 25px
         line-height: 1.3
@@ -197,6 +200,16 @@
         line-height: 1.2
 
     &__price-tabs
+        .extra
+            flex: 1
+            margin-top: -4px
+            padding-left: 20px
+            min-width: 0
+            color: var(--green)
+            text-align: left
+            font-weight: regular
+            font-size: 14px
+
         .price-box-avista
             display: block
             margin-bottom: 0
@@ -229,7 +242,7 @@
             .preco-parcelado:before
                 display: inline-block
                 margin-right: 5px
-                content: url(card)
+                content: url(pays)
                 vertical-align: middle
 
             .num, .value
@@ -245,10 +258,30 @@
         border-top: solid 1px #dddddd
 
         a
-            display: none
-            color: var(--blue)
-            font-weight: semibold
+            color: var(--black)
+            font-weight: regular
             font-size: 12px
+
+        &--card
+            .card
+                display: flex
+                justify-content: flex-start
+                align-items: center
+
+                &:before
+                    display: inline-block
+                    margin-right: 5px
+                    content: url(card)
+                    vertical-align: middle
+
+            .price-box-avista
+                &:before
+                    margin-right: 0
+                    content: '1x de'
+                    font-weight: semibold
+
+                &:after
+                    content: ' no cartão de crédito'
 
     &__categories
         padding: 20px
@@ -343,8 +376,39 @@
             border: 0
 
 @media (min-width: 993px)
+    #product_addtocart_form
+        flex-flow: row wrap
+
+    .prod__header
+        flex: 0 0 100%
+        padding-bottom: 20px
+        text-align: center
+
+        .prod__review
+            order: -1
+
+        .prod__sku
+            margin-bottom: 10px
+            color: #878787
+            font-size: 12px
+
+    .prod__row
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 20px
+
+        .add-to-cart
+            margin: 0 20px
+
     .prod__img
         flex: 0 0 500px
+
+        .product-image-gallery
+            img
+                width: 100%
+                height: 100%
+                object-fit: contain
 
     .frete
         padding: 15px

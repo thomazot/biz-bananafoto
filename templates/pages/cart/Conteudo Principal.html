@@ -1,0 +1,45 @@
+    
+    <div class="cart__products">
+        
+
+        <div class="page-title title--cart">
+            <h1><strong>Meu carrinho de compras</strong> <span>- Yes, We love photography</span></h1>
+        </div>
+
+        @tabela-produtos
+        @aviso-frete-gratis
+        <div class="cart__shipping-cupom">
+            <div class="cart__shipping">
+                @simulador-frete
+            </div>
+            <div class="cart__cupom cart-cupom">
+                <button type="button" class="cart-cupom__title" onclick="modal_open('modal-cupom')">
+                    Tenho um vale presente ou cupom de desconto
+                </button>
+                <div id="modal-cupom" class="cart-cupom__content">
+                    <div class="cart-cupom">
+                        <div class="cart-cupom__ico">
+                            <svg class="ico z-cupom"><use xlink:href="#z-cupom" /></svg>
+                        </div>
+                        <div class="cart-cupom__title">
+                            Vale Presente ou Cupom de desconto
+                        </div>
+                        <div class="cart-cupom__description">
+                            Insira abaixo o seu cupom de desconto da Bananafoto e clique em aplicar
+                        </div>
+                        @cupom
+                    </div>
+                </div>
+                <script>modal('modal-cupom')</script>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart__resume">
+   		@totais
+        
+        @bt(finalizar "Finalizar Compra")
+        @bt(multi-envios "Finalizar com Múltiplos Endereços")
+        @bt(continuar-comprando "Escolher mais produtos")
+    </div>
+

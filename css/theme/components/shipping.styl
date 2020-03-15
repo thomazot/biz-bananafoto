@@ -1,0 +1,128 @@
+.shipping
+    border-radius: 3px
+    background: var(--gray)
+    box-shadow: none
+
+    .title
+        color: var(--black)
+        font-weight: regular
+        font-size: 14px
+
+        &:before
+            content: 'Simular frete e prazos'
+
+        span
+            display: none
+
+    &__postcode
+        label
+            display: none
+
+        .input-text
+            height: 58px
+            border: 0 !important
+            background: none
+
+    &__form
+        margin-bottom: 20px
+        height: 58px
+        border: solid 1px var(--select)
+        border-radius: 58px
+        background: #fff
+
+    &__action
+        .btn
+            margin-right: 5px
+            width: 47px
+            height: 47px
+            border-radius: 50%
+            background: color2_bg
+            box-shadow: none
+            color: var(--black)
+            text-transform: uppercase
+            font-weight: 400
+            font-size: 14px
+
+            &:before
+                content: 'OK'
+
+            span
+                display: none
+
+            &:hover
+                background: color2_bg
+                color: var(--black)
+
+    @media (min-width: 993px)
+        display: flex
+        flex-flow: row wrap
+        align-items: center
+
+        .title
+            padding-right: 20px
+
+.co-shipping
+    margin: 0 -16px -16px
+    padding: 1px 0 16px
+    border-top: 0
+    background: #fff
+
+    &__methods
+        dt
+            display: none
+
+        label
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin: 10px 0
+            padding: 20px
+            border: solid 1px var(--select)
+            color: var(--black-light)
+            font-weight: regular
+            font-size: 14px
+            line-height: 1
+
+            &:before
+                display: inline-block
+                flex: 0 0 26px
+                margin-right: 10px
+                width: 26px
+                height: 26px
+                border: solid 1px var(--select)
+                border-radius: 50%
+                background: var(--select)
+                box-shadow: inset 0 0 0 5px #fff
+                content: ''
+
+            .price
+                flex: 1
+                min-width: 0
+                color: var(--blue)
+                text-align: right
+
+        [type=radio]
+            display: none
+
+            &:checked + label
+                border-color: var(--blue)
+
+                &:before
+                    border-color: var(--blue)
+                    background: var(--blue)
+
+        @media (max-width: 500px)
+            label
+                flex-wrap: wrap
+
+                &:before
+                    margin-bottom: 10px
+
+                .price
+                    display: block
+                    flex: 0 0 100%
+                    padding-top: 10px
+                    text-align: right
+
+    @media (min-width: 993px)
+        flex: 0 0 calc(100% + 32px)

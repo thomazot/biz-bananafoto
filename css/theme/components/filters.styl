@@ -11,6 +11,7 @@
             display: none
 
     @media (min-width: 993px)
+        position: static
         display: flex
         flex-flow: column nowrap
         padding: 20px 0 0
@@ -20,7 +21,9 @@
             display: none
 
         &__list
+            display: flex
             order: -1
+            flex-flow: row wrap
 
         &__name
             display: flex
@@ -47,14 +50,13 @@
 
         &__filter
             position: relative
-            display: none
             margin: 0
-            padding: 10px 8px 10px 0
+            padding: 5px 8px 5px 0
             background: none
             box-shadow: none
 
-            &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5)
-                display: block
+            &:hover
+                z-index: 200
 
             .a--0, .a-filter
                 &, .count
