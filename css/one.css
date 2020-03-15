@@ -12185,7 +12185,7 @@ body {
 }
 @media (min-width: 993px) {
   .cart .cart-cupom__title {
-    height: 5.94rem;
+    height: 5.56rem;
   }
   .cart .cart-cupom__title:hover {
     box-shadow: 0 0 0 1px var(--blue);
