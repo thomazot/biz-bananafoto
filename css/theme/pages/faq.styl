@@ -89,6 +89,9 @@
                 &:hover
                     box-shadow: 0 0 0 2px color2_bg, 0 5px 0 color2_bg
 
+                    .ico
+                        fill: color2_bg
+
             span
                 display: block
                 color: #737373
@@ -107,18 +110,17 @@
         p
             margin: 0
             color: #737373
-            font-weight: regular
-            font-style: italic
-            font-size: 14px
-            line-height: 1.2
-
-            strong
-                color: var(--black)
+            font-weight: 300
+            font-size: 15px
+            line-height: 1.5
 
     &__title-blue
         margin-bottom: 10px
         color: var(--blue)
-        font-size: 21px
+        font-size: 26px
+
+        strong
+            color: color2_bg
 
     &__grids
         margin: 40px -10px
@@ -165,9 +167,18 @@
             height: 34px
             color: #dadada
 
+        .z-less
+            display: none
+
         &.on
             .ico
                 color: color2_bg
+
+            .z-less
+                display: block
+
+            .z-more
+                display: none
 
             + .faq__content
                 display: block
