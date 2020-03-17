@@ -1381,7 +1381,7 @@ $j.fn.neonTheme.custom = {
     m_filters: true, // ativa o responsivo dos Filtros do Catálogo
     m_myaccount: false, // ativa o responsivo da Minha Conta
     m_mycart: false, // ativa o responsivo do Meu Carrinho
-    m_parcelamento: true, // ativa o responsivo do parcelamento na página de produto
+    m_parcelamento: false, // ativa o responsivo do parcelamento na página de produto
     m_frete: true, // ativa o responsivo do cálculo de frete na página do produto
     m_produto: true, // ativa o responsivo de cada bloco da página de produto
     m_tabs: true, // ativa o responsivo do componente .tabs do tema
@@ -1672,6 +1672,12 @@ $j(document)
         $('.go-to-top').click(function(event) {
             event.preventDefault()
             $('html, body').animate({ scrollTop: 0 }, 'slow')
+        })
+
+        $('.prod__tags .prolabel').each(function() {
+            if ($(this).find('img')) {
+                $(this).addClass('super')
+            }
         })
     })
     .on('resizeStop', function(e) {

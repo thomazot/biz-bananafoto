@@ -40,6 +40,15 @@
             @endif(!is_simple)
             <div class="prod__prices">
                 @preco
+                @if(desconto)
+                <div class="prod__question">
+                    <svg class="ico z-question"><use xlink:href="#z-question" /></svg>
+                    <div>
+                        <p>Valor com desconto aplicado para pagamento à vista.</p>
+                        <p>O desconto será gerado na finalizacao do pedido ao optar pela forma de pagamento à vista.</p>
+                    </div>
+                </div>
+                @endif(desconto)
             </div>  
             @if(is_simple)
             <div class="prod__short-description">@descricao(curta)</div>
@@ -82,5 +91,14 @@
         
 	</div>
 </div>
-<div id="modal-payments">@parcelamento</div>
+<div id="modal-payments" class="modal-payments">
+    <h3 class="modal-payments__title">Pagamento facilitado na bananafoto</h3>
+    <div class="modal-payments__description">
+        Compre agora de <span class="sub">R$2.595,52</span> por <span class="dark">R$2.272,42</span> e pague em até <span class="dark">12x sem juros</span> no cartão de crédito ou com <span class="dark">desconto de 10%</span> para pagamento à vista ou ainda 10% de desconto para pagamento em 1x no cartão.
+    </div>
+    @parcelamento
+    <div class="modal-payments__obs">
+        *Todos os valores e condições de pagamento estão sujeitos a alteração sem aviso prévio.  Havendo divergência no preço, o valor válido será o do carrinho de compras no ato do fechamento do pedido. Em caso de dúvidas acesse a <a href="#">Política de vendas da Bananafoto</a> ou <a href="#">Atendimento Bananafoto</a>.
+    </div>
+</div>
 <script>modal('modal-payments');</script>
