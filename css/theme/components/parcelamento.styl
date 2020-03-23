@@ -6,12 +6,17 @@
         &, .num, .valor
             color: #aaa
             font-weight: regular
-            font-size: 18px
+            font-size: 14px
+
+        @media (min-width: 993px)
+            .num
+                display: inline-block
+                min-width: 140px
 
     .desconto
         padding: 0 20px
         color: var(--green)
-        font-size: 18px
+        font-size: 14px
 
         .label
             display: none
@@ -22,3 +27,7 @@
         font-weight: regular
         font-style: normal
         font-size: 14px
+
+    ul
+        @media (min-width: 993px)
+            width: 60%

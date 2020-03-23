@@ -113,7 +113,7 @@
 
             .price span
                 color: var(--blue)
-                font-weight: regular
+                font-weight: semibold
                 font-size: 35px
 
         .qty-wrapper
@@ -138,6 +138,10 @@
             span
                 display: inline
                 line-height: 1
+
+            @media (min-width: 993px)
+                &:hover
+                    background: var(--green-dark)
 
     &__tags
         > div
@@ -186,7 +190,7 @@
     &__name h1
         margin-bottom: 5px
         color: var(--black)
-        font-weight: regular
+        font-weight: semibold
         font-size: 25px
         line-height: 1.3
 
@@ -326,6 +330,17 @@
         justify-content: center
         align-items: center
 
+        .price-box-avista
+            margin-bottom: 0
+
+            .label
+                display: none
+
+            .price
+                color: var(--blue)
+                font-weight: semibold
+                font-size: 35px
+
     &__question
         position: relative
         display: inline-block
@@ -375,6 +390,23 @@
                 visibility: visible
                 opacity: 1
                 transform: translateY(0)
+
+.tabs
+    &__content
+        &, &.std
+            color: #686c6f
+            font-weight: 300
+            font-size: 16px
+
+            h2
+                color: var(--blue)
+                font-weight: semibold
+                font-size: 23px
+
+            h3
+                color: #686c6f
+                font-weight: semibold
+                font-size: 20px
 
 @media (max-width: 568px)
     .prod

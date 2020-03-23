@@ -21,10 +21,11 @@
             margin-left: 20px
             width: 14px
             height: 14px
+            transform: rotate(180deg)
 
         &.on
             .ico
-                transform: rotate(180deg)
+                transform: rotate(0)
 
         &:hover
             box-shadow: none
@@ -43,12 +44,15 @@
         opacity: 1
 
     &__content
-        display: none
+        margin-bottom: 20px
         text-align: left
 
+        .options-list
+            width: 100%
+
         .on &
-            display: block
-            margin-bottom: 20px
+            display: none
+            margin-bottom: 0
 
     .options-bundle-images
         display: none !important
