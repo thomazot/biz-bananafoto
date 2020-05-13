@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="banana__main">
-            {{widget type="interface/widget_produtos" template="interface/widgets/produtos.phtml" identificador="showcase-banana" carrossel="1" limite="12" markup="<h2 class='products__header'><a href='@url' itemprop='url' title='Mais detalhes' class='products__link'><span class='products__image product-image'>@foto(260x260)</span></a></h2><div class='products__main'><div class='products__sku'>@atributo(sku)</div><a href='@url' title='@nome(60)' class='products__name'>@nome</a>@if(is_disponivel)@preco@else(is_disponivel)<div class='products__out'>Produto Esgotado</div>@endif(is_disponivel)<div class='products__review'>@avaliacoes</div><div class='products__actions'>@bt(comprar 'Descobrir oferta')</div></div>"}}
+            {{widget type="interface/widget_produtos" template="interface/widgets/produtos.phtml" identificador="showcase-banana" carrossel="1" limite="12" markup="<h2 class='products__header'><a href='@url' itemprop='url' title='Mais detalhes' class='products__link'><span class='products__image product-image'>@foto(260x260)</span></a></h2><div class='products__main'><div class='products__sku'>@atributo(sku)</div><a href='@url' title='@nome(60)' class='products__name'>@nome</a>@if(is_disponivel)@preco(avista)@else(is_disponivel)<div class='products__out'>Produto Esgotado</div>@endif(is_disponivel)<div class='products__review'>@avaliacoes</div><div class='products__actions'>@bt(comprar 'Descobrir oferta')</div></div>"}}
         </div>
         <div class="banana__footer">
             <a class="banana__more" href="/super-oferta">

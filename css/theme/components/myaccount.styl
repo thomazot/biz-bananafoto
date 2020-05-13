@@ -153,3 +153,29 @@
 
         &:hover .myaccount__content
             display: flex
+
+
+.myaccount
+    .categories &
+        display: none 
+
+        &__header 
+            width: 100%
+            max-width: none 
+            padding: 0 15px
+            
+            > div 
+                display: block
+                flex: 1
+                min-width: 0
+                text-align: left
+
+                a
+                    display: inline
+
+            a 
+                order: -1
+
+        @media (max-width: 992px)
+            display: block
+            background: color2_bg

@@ -19,7 +19,7 @@
                 width: 34px
                 height: 60px
                 background: #fff
-                box-shadow: 0 0 10px rgba(0, 0, 0, .1)
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
                 color: var(--black)
                 transform: translateY(-50%)
 
@@ -71,7 +71,7 @@
                 width: 50px
                 height: 50px
                 border-radius: 50%
-                box-shadow: 0 0 10px rgba(0, 0, 0, .1)
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
 
                 .img
                     display: none
@@ -266,6 +266,12 @@
         padding: 15px 0
         border-top: solid 1px #dddddd
 
+        @media (max-width: 500px)
+            display: block
+
+            .extra 
+                padding: 2px 0
+
         a
             color: var(--black)
             font-weight: regular
@@ -329,6 +335,7 @@
         display: flex
         justify-content: center
         align-items: center
+        margin-bottom: 15px
 
         .price-box-avista
             margin-bottom: 0
@@ -365,12 +372,12 @@
             width: 200px
             border-radius: 2px
             background: #F1F3F3
-            box-shadow: 0 0 10px rgba(0, 0, 0, .2)
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
             color: var(--black)
             text-align: left
             font-size: 11px
             opacity: 0
-            transition: all .2 ease
+            transition: all 0.2 ease
             transform: translateY(10px)
 
             &:before
@@ -447,8 +454,6 @@
                 font-weight: bold
                 font-size: 18px
 
-                &:after
-                    opacity: 1
 
             &:first-child
                 padding-right: 20px

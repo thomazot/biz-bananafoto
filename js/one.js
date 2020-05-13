@@ -1719,6 +1719,13 @@ $j(document)
                     .addClass('on')
             }
         })
+
+        // menu
+        var myaccount = $('.header .myaccount')
+
+        if(myaccount.length) {
+            $('.categories__hide').after(myaccount.clone())
+        }
     })
     .on('resizeStop', function(e) {
         // Safe window.resize
